@@ -17,7 +17,7 @@
   $ aws configure sso
   ```
 - Get AWS access portal url from `IAM Identity Center`.
-  - https://<your-sso-id>.awsapps.com/start
+  - `https://<your-sso-id>.awsapps.com/start`
 - Login to AWS SSO with SSO user.
   ```
   $ aws sso login --profile <profile name from the previous step>
