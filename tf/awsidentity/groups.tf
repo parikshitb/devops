@@ -3,3 +3,9 @@ resource "aws_identitystore_group" "tf_admins" {
   display_name      = "tf_admins"
   description       = "Admins allowed to run Terraform"
 }
+
+resource "aws_identitystore_group" "break_glass" {
+  display_name      = "BreakGlassAdmins"
+  description       = "Emergency admin access"
+  identity_store_id = local.identity_store_id
+}
