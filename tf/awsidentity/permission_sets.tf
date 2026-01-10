@@ -39,3 +39,9 @@ resource "aws_ssoadmin_managed_policy_attachment" "poweruser_policy" {
   permission_set_arn = aws_ssoadmin_permission_set.tfpoweruser.arn
   managed_policy_arn = "arn:aws:iam::aws:policy/PowerUserAccess"
 }
+
+# oidc
+resource "aws_iam_role_policy_attachment" "terraform_ci_admin" {
+  role       = aws_iam_role.terraform_ci.name
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+}
