@@ -34,4 +34,3 @@ steps:
       provider: 'azurerm'
       command: 'plan'
       workingDirectory: $(workingDirectory)
-      environmentServiceNameAzureRM: $(serviceConnection)
