@@ -25,6 +25,11 @@ steps:
       provider: 'azurerm'
       command: 'init'
       workingDirectory: $(workingDirectory)
+      backendServiceArm: $(serviceConnection)
+      backendAzureRmResourceGroupName: 'rg-tf-metadata'
+      backendAzureRmStorageAccountName: 'satfstate230440'
+      backendAzureRmContainerName: 'tfstate'
+      backendAzureRmKey: 'connected-car.tfstate'
 
   # Terraform Plan
   - task: TerraformTaskV4@4
