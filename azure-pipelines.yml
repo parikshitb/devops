@@ -25,7 +25,6 @@ steps:
       provider: 'azurerm'
       command: 'init'
       workingDirectory: $(workingDirectory)
-      backendServiceArm: $(serviceConnection)
 
   # Terraform Plan
   - task: TerraformTaskV4@4
